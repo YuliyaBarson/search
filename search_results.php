@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     require('header.php');
     echo "<div class='container'>";
 
@@ -9,12 +10,15 @@
 
     //connect to the db 
     require('connect.php');
+    $_SESSION['name'] = $name;
     //create the SQL statement 
-    $query = "SELECT title FROM riskyjobs WHERE title = :search_term;"; 
+    $query = "SELECT title FROM riskyjobs WHERE title LIKE :search_term;"; 
     //prepare
     $stmt = $db->prepare($query); 
     //bind
-    $stmt->bindParam(':search_term', $search_term);
+    //$stmt->bindParam(':search_term', $search_term);
+    $stmt->bindValue(':search_term', '%'.$search_term.'%');
+
     //execute
     $stmt->execute(); 
 
@@ -33,6 +37,7 @@
         echo "<p> No results found! </p>"; 
     }
     echo "</ul>";
+    echo "<a href='moreinfo.php'>More Info</a>";
     echo "</div>";
     $stmt->closeCursor(); 
 ?>

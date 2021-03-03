@@ -1,9 +1,12 @@
-<?php  
+<?php session_start();
     require('header.php'); 
 ?>
     <div class="container">
         <h1> More Information </h1> 
         <!--dynamically display the users name in order to personalize the app -->
+        <?php
+            echo "<h2> Hi there " . $_SESSION['name'] . "!</h2>";
+        ?>
         <p> 
         Menu
         Put a bird on it franzen locavore coloring book mumblecore YOLO occupy salvia migas tbh. Intelligentsia live-edge cardigan meh, bitters keytar shaman disrupt lumbersexual. Vegan hammock cronut irony cold-pressed mumblecore narwhal seitan freegan chartreuse. Truffaut cronut quinoa gastropub, cardigan waistcoat cloud bread enamel pin small batch man bun paleo viral readymade tattooed migas. Offal bitters cred hot chicken aesthetic pinterest ethical XOXO disrupt gochujang pour-over man braid irony. Leggings brooklyn williamsburg intelligentsia tbh locavore pork belly man braid.
