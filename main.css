@@ -1,0 +1,32 @@
+html,
+body {
+    height: 100%; 
+}
+
+body {
+    display: flex; 
+    justify-content: center;
+}
+
+.container {
+    margin-top: 2em; 
+}
+
+.bg-light {
+    padding: 1em; 
+}
+
+h1, 
+h2 {
+    padding: 1em 0; 
+}
+
+h2 {
+    text-align:center; 
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
